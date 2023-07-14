@@ -448,7 +448,7 @@
 
 
 #bottomLeftHealthBar {
-    height: 21px;
+    height: 21px!important;
 	border: 5px solid black;
 	transform: scaleX(-1);
 	margin-left: 20px;
@@ -463,6 +463,7 @@
 .nHealthBarSeg {
     display: inline-block;
     width: 78px;
+	height: 21px!important;
 
     border-radius: 0;
     margin-right: 0!important;
