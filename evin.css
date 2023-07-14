@@ -287,15 +287,26 @@
 	direction: ltr;
 }
 
-.chatItem:has(.chatMsg[style="color:#66e16e"]) {
+.chatItem:has(.chatMsg[style="color:#66e16e"]), .chatItem:has(.chatMsg[style="color:#fbe241"])   {
 	max-width: 750px!important;
 }
+
 
 .chatMsg[style="color:#66e16e"]::before {
 	content: "(!) ";
 	color: #408ee7;
-	max-width: 750px!important;
 }
+
+.chatMsg[style="color:#fbe241"]::before {
+	content: "(!) ";
+	color: #408ee7;
+}
+
+.chatMsg[style="color:#fbe241"] {
+	font-size: 23px !important;
+}
+
+
 
 #voiceDisplay {
     display: none
@@ -389,7 +400,7 @@
 }
 
 #uiBase.onMenu #chatList {
-	max-height: 340px!important;
+	max-height: 250px!important;
 
 }
 
@@ -448,7 +459,7 @@
 
 
 #bottomLeftHealthBar {
-    height: 21px!important;
+    height: 21px;
 	border: 5px solid black;
 	transform: scaleX(-1);
 	margin-left: 20px;
@@ -463,7 +474,7 @@
 .nHealthBarSeg {
     display: inline-block;
     width: 78px;
-	height: 21px!important;
+    height: 21px;
 
     border-radius: 0;
     margin-right: 0!important;
@@ -515,7 +526,6 @@
 
 #bottomLeftHealth {
     font-size: 35px;
-	
 }
 
 
@@ -1294,6 +1304,63 @@ box-shadow: inset 0 0 5px #0000009c;
 
 
 
+#pClassHolder {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+
+#pClassSelParent {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	height: fit-content;
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+#pClassSelH:hover, #pClassSelZ:hover {
+	opacity: 1!important;
+	color: white;
+	padding-right: 10px;
+	padding-left: 100px;
+	border-right: 7px solid #ffffff;
+}
+
+#pClassSelH, #pClassSelZ {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+	margin-bottom: 15px;
+	padding-left: 40px;
+	padding-bottom: 4px;
+	border-right: 5px solid #b91b1a;
+	background: linear-gradient(-90deg, rgb(131 0 0 / 50%) 0%, rgb(59 2 2 / 45%) 65%, rgb(0 0 0 / 0%) 100%);
+	text-shadow: 3px 3px #000000, -3px -3px black, -3px 3px black, 3px -3px black;
+	transition: 0.2s;
+	animation: none!important;
+	opacity: 0.4;
+}
+
+#pClassSelZ {
+	color: #ff3838;
+	opacity: 1;
+}
+
+
+#pClassSelH {
+	color: #dcdcdc;
+}
+
+
+
+
 #menPlayerClass {
     color: white;
     font-size: 0!important;
@@ -1306,9 +1373,7 @@ box-shadow: inset 0 0 5px #0000009c;
 	transition: 0.3s;
 	transition-timing-function: ease-in-out;
 
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
+
 
 	/*animation: important 2.9s ease-in-out infinite;*/
 	z-index: 9;
@@ -1375,7 +1440,6 @@ box-shadow: inset 0 0 5px #0000009c;
 	white-space: pre-line;
 	color: #f73a3a
 }
-
 
 
 #menItemZClass {
@@ -1483,9 +1547,10 @@ box-shadow: inset 0 0 5px #0000009c;
   background-color: #474747e1; 
   cursor: pointer;
   color: #d9d9d9;
-  margin-top: 40px;
+  margin-top: 35px;
   clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 100% 100%, 34% 100%, 33% 90%, 30% 100%, 0% 100%);
-	transition: 0.2s
+	transition: 0.2s;
+    box-shadow: inset 0 0 20px #0606068c;
 }
 
 
@@ -1644,7 +1709,7 @@ box-shadow: inset 0 0 130px #000000;
 
 #selClass1 {
 
-  background-image: url(https://i.imgur.com/T6modOZ.png);
+  background-image: url(https://i.imgur.com/XnubjWF.png);
 }
 
 #selClass1::after {
@@ -1699,7 +1764,7 @@ box-shadow: inset 0 0 130px #000000;
 
 
 #selClass2 {
-  background-image: url(https://i.imgur.com/dvxPMUA.png);
+  background-image: url(https://i.imgur.com/Le78Nam.png);
 }
 
 #selClass2:hover::before {
@@ -1707,7 +1772,7 @@ box-shadow: inset 0 0 130px #000000;
 }
 
 #selClass3 {
-  background-image: url(https://i.imgur.com/wqKaRAS.png);
+  background-image: url(https://i.imgur.com/XPYhOdh.png);
 }
 
 #selClass3:hover::before {
@@ -2491,7 +2556,7 @@ box-shadow: inset 0 0 130px #000000;
     background: transparent!important;
     width: 280px!important;
 	padding: 0!important;
-	margin: 0!important
+	margin: 0!important;
 }
 
 
