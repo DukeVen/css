@@ -1,1 +1,2573 @@
+:root {
+    --yellowbg: #e84a40;
+    --div-grey: transparent;
+    --div-black: transparent;
+}
 
+/* #fullMenHider, #instructionHolder {
+	display: none!important
+}
+
+#inGameUI {
+	display: block!important;
+	pointer-events: all;
+}
+
+
+#customGUIHolder  {
+	display: block!important;
+	pointer-events: all;
+}
+
+#centerLeaderDisplay {
+	display: block!important
+}  
+ */
+
+
+
+@font-face {
+    font-family: gamefont;
+    src: url(https://raw.githubusercontent.com/DukeVen/krnk-font-test/main/Forza-BoldFinal.ttf);
+}
+
+
+#headerRight * {
+    display: none;
+
+}
+
+#menuServerInfoContainer {
+    display: flex!important;
+}
+
+#menuServerInfoContainer * {
+	display: inline-block!important;
+}
+
+#headerRight {
+	top: 110px;
+	right: 20px;
+	
+	padding: 10px;
+	padding-left: 50px;
+	padding-right: 20px;
+	padding-bottom: 15px; 
+
+	box-shadow: none!important;
+}
+
+
+
+#menuFPSDisplay {
+	font-size: 19px;
+}
+
+
+#menuRegionLabel {
+	color: #ffffff !important;
+	margin-right: 0px;
+	font-size: 20px;
+}
+
+
+
+#menuPingDisplay:after {
+	content: " Ping";
+	font-size: 19px;
+}
+
+
+#menuFPS, #menuPingText {
+	color: #e84a40 !important
+}
+
+
+#menuPingDisplay .material-icons {
+  display: none!important;
+}
+
+#menuPingText {
+	margin-left: 5px;
+}
+
+
+#menuFPS, #menuPingText {
+	font-size: 19px;
+}
+
+
+#headerRight.headerBar {
+    border-radius: 0;
+	padding: 0;
+	filter: drop-shadow(5px 5px 0px #00000045);
+}
+
+#menuServerInfoContainer {
+    background-color: #171717;
+	clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 99% 0%, 100% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+	padding: 15px;
+	padding-top: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#menuServerInfoContainer:hover {
+    background-color: #212121;
+}
+
+
+#streamContainer {
+    display: none;
+}
+
+#termsInfo {
+    display: none;
+}
+
+#policeButton {
+    display: none
+}
+
+.menuItem[onclick*="showWindow(5)"] {
+    display: flex!important
+}
+
+.menuItem[onclick*="showWindow(1)"] {
+    display: flex!important
+}
+
+/* .menuItem[onclick*="showWindow(4)"] {
+    display: flex!important
+} */
+
+/* .menuItem[onclick*="showGames()"] {
+    display: flex!important
+} */
+
+.menuItem {
+    display: none
+}
+
+#tlInfHold {
+    display: none
+}
+
+#mLevelCont {
+    display: none
+}
+
+#menuLvlHold {
+    display: none
+}
+
+#menuJNKCount {
+    display: none
+}
+
+#seasonLabel {
+    display: none
+}
+
+
+#mainLogoFace {
+    display: none
+}
+
+
+
+
+/* ------------------ ingame ---------------------- */
+
+#timerDisplay {
+    display: none!important
+}
+
+#topLeftData {
+	position: fixed;
+	transform: translateY(-50%);
+	top: 50%
+}
+
+#curGameInfo, #topLeftMatchData {
+    display: none!important
+}
+
+#topLefHider {
+    display: none!important
+}
+
+#topLeftBottom.topLeftOld {
+	top: 300px;
+}
+
+
+.topRightCounters {
+ 	display: none!important
+}
+
+#topRight {
+	top: 220px
+}
+
+#minimapO {
+	display: none;
+	width: 389px;
+	height: 389px;
+	background-color: transparent;
+	position: fixed;
+	bottom: 44px;
+	left: 44px;
+	border-radius: 100%;
+	border: 8px solid #000000d6;
+	box-shadow: inset 0 0 90px #000000;
+	z-index: 0!important
+}
+
+/* canvas { /*required so that blip is above div
+	z-index: 2!important
+}
+ */
+
+
+
+/* Chat stuff */
+/* 
+.chatMsg span[style*="color:#9eeb56"] {
+    color: #81b1f5!important;
+}
+
+
+.chatMsg [style="color:#fff"] {
+    color: #98c3ff!important
+}
+
+.chatMsg[style="color:#fc03ec"] {
+	color: #bbb!important
+}
+
+
+.chatItem.chatTextOutline [style*="color:#"] {
+    font-family: Arial;
+    font-size: 24px;
+}
+
+.chatItem [style*="color:#"] {
+    font-family: Arial;
+    font-size: 24px;
+} */
+
+.chatMsg[style="color:#fc03ec"] {
+	color: #e0bc6e!important
+}
+
+
+#chatHolder * {
+	font-family: Arial;
+	font-weight: 600;
+}
+
+
+#uiBase.onMenu .chatItem {
+    padding-left: 5px!important
+}
+
+.chatItem {    
+    color: #fff;
+    background-color: rgba(0,0,0,0)!important;
+    max-width: 630px!important;
+    font-size: 24px!important;
+    padding-right: 10px!important;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+    padding: 0!important;
+    margin: 5px;
+	margin-left: 5px;
+	margin-right: 0;
+    letter-spacing: 2px;
+	direction: ltr;
+}
+
+.chatItem:has(.chatMsg[style="color:#66e16e"]), .chatItem:has(.chatMsg[style="color:#fbe241"])   {
+	max-width: 750px!important;
+}
+
+
+.chatMsg[style="color:#66e16e"]::before {
+	content: "(!) ";
+	color: #408ee7;
+}
+
+.chatMsg[style="color:#fbe241"]::before {
+	content: "(!) ";
+	color: #408ee7;
+}
+
+.chatMsg[style="color:#fbe241"] {
+	font-size: 23px !important;
+}
+
+
+
+#voiceDisplay {
+    display: none
+}
+
+#chatHolder {
+    bottom: auto!important;
+    top: 10px;
+    left: 1px;
+}
+
+#chatInput {
+    padding: 11px;
+    font-size: 25px;
+    border: none;
+    border-radius: 0;
+    margin-left: 0;
+    padding-left: 13px;
+    padding-right: 40px;
+    width: 500px;
+	background-color: rgb(0 0 0 / 45%);
+	border: 4px solid #0000004f;
+}
+
+#chatInputHolder {
+    padding: 0!important;
+    margin-top: 6px;
+    font-size: 15px;
+    background-color: transparent!important;
+    border: none;
+    border-radius: 0;
+    margin-top: 10px;
+	grid-template-columns: auto;
+}
+
+.greyInlineInner {
+	width: fit-content;
+	padding: 0;
+}
+
+#uiBase.onGame #chatInputHolder {
+    opacity: 0;
+    background-color: transparent;
+    border: none
+}
+
+#uiBase.onMenu #chatInput {
+	height: 50px;
+	margin-top: 5px
+}
+
+
+#uiBase #chatInputHolder:focus-within {
+    opacity: 1;
+}
+
+#uiBase #chatSwitchHolder {
+    display: none
+}
+
+
+#uiBase.onMenu #chatHolder {
+    bottom: 22px!important;
+    top: auto!important;
+    left: 170px;
+
+}
+
+#chatList::-webkit-scrollbar {
+    width: 0px!important;
+}
+
+#chatList::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,.5)!important
+}
+
+.chatMsg {	
+    font-size: 24px!important;
+    white-space: break-spaces;
+    padding: 0!important;
+    
+    text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+}
+
+
+#chatList {
+	max-height: 418px!important;
+	width: 700px!important;
+	margin-left: auto!important;
+    background-color: transparent!important
+}
+
+#uiBase.onMenu #chatList {
+	max-height: 250px!important;
+
+}
+
+
+/* Chat stuff */
+
+
+
+
+
+#bottomLeftHolder {
+	left: auto;
+	bottom: auto;
+	top: 30px;
+	right: 225px;
+	background-color: rgb(0 0 0 / 65%);
+	border: 5px solid black;
+	width: fit-content;
+	padding: 0 20px;
+	height: 80px;
+	display: flex!important;
+	justify-content: end;
+	align-items: center;
+
+	box-shadow: inset 0 0 30px #00000099;
+}
+
+#bottomLeftHolder::before {
+	left: 0;
+	content: "HP ";
+	font-size: 30px;
+	color: white;
+	margin-bottom: 5px;
+}
+
+#bottomLeftPlayer {
+	display: flex;
+}
+
+#bottomLeftPlayerLeft {
+    display: none
+}
+
+
+
+#bottomLeftPlayerMid {
+	display: flex;
+	margin: 0;
+}
+
+
+#bottomLeftTeamHolder {
+	display: none
+}
+
+
+
+#bottomLeftHealthBar {
+    height: 21px;
+	border: 5px solid black;
+	transform: scaleX(-1);
+	margin-left: 20px;
+	
+    display: flex;
+    padding: 0;
+    column-gap: 0px;
+	max-width: 385px;
+}
+
+
+.nHealthBarSeg {
+    display: inline-block;
+    width: 78px;
+    height: 21px;
+
+    border-radius: 0;
+    margin-right: 0!important;
+	margin-left: -1px;
+	margin-bottom: 5px;
+    background-color: #9d2525;
+	
+}
+
+.nHpBSeg {
+    border-radius: 0;
+    box-shadow: none!important;
+    background-color: #e63434!important;
+	
+}
+
+.nHpBSeg {
+
+}
+
+
+
+#maxHP {
+    display: none;
+}
+
+#bottomLeftChallIcon {
+	display: none !important;
+}
+
+#bottomLeftPlayerRight * {
+	font-family: Arial;
+	font-weight: 600
+}
+
+#bottomLeftPlayerRight {
+	position: absolute;
+	z-index: 999;
+	background-color: transparent;
+	bottom: 20px;
+	right: 37px;
+
+    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+
+}
+
+#bottomLeftHealth {
+    font-size: 35px;
+}
+
+
+
+@keyframes appear {
+  0%{
+	bottom: -300px;
+	opacity: 0%;
+  }
+  50%{
+    opacity: 15%;
+  }
+  100%{
+	bottom: 30px;
+	opacity: 100%;
+  }
+}
+
+#reloadMsg {
+	visibility: hidden;
+	border-radius: 1px;
+	border: 3px solid rgb(0 0 0 / 25%);
+	padding: 0px 15px;
+	line-height: 60px;
+	padding-bottom: 5px;
+
+	background-color: rgb(0 0 0 / 45%);
+	animation: appear 0.3s cubic-bezier(0.01, 0, 0.58, 1) 1;
+}
+
+#reloadMsg::before {
+	visibility: visible;
+	content: "sync";
+	font-family: "material icons";
+	font-size: 60px;
+	background-color: rgb(0 0 0 / 45%);
+	padding: 10px!important;
+	border-radius: 100%;
+	border: 2px solid rgb(0 0 0 / 40%);
+	
+	position: fixed;
+	left: 31%;
+	bottom: 40px;
+	animation: rotate2 1.3s linear infinite;
+}
+
+@keyframes rotate2 {
+	
+	0% {
+	    transform: rotate(0deg) scale(1);
+	}
+
+	50% {
+	    transform: rotate(-180deg) scale(1.05);
+		border: 6px solid #b62929;
+	}
+
+	100% {
+		transform: rotate(-360deg) scale(1);
+	}
+	
+}
+
+#teamName {
+	display: none!important
+}
+
+#hudClassIcon {
+	display: none
+}
+
+
+
+
+#bottomRight {
+	bottom: auto;
+	top: 138px;
+	right: 225px;
+	height: 55px;
+	z-index: 999;
+	width: 514px /* */;
+	background-color: rgb(0 0 0 / 65%);
+	border: 5px solid black;
+	box-shadow: inset 0 0 30px #00000099;
+}
+
+
+
+#bottomRight::before {
+	position: absolute;
+	content: "AMMO";
+	left: 20px;
+	font-size: 25px;
+	color: white;
+	top: 46%;
+	transform: translateY(-50%);
+}
+
+
+
+
+#weapHolder {
+	display: flex!important;
+	align-items: center;
+	justify-content: center;
+	bottom: auto;
+	top: 30px;
+	right: 32px;
+	width: 160px;
+	height: 160px;
+	background-color: #0000009e;
+
+	border: 7px solid black; 
+	box-shadow: inset 0 0 40px #00000099;
+
+}
+
+.weapItem {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.weapItemInner {
+    margin: 0;
+    padding: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.weapIcon {
+	height: 105px;
+	width: auto;
+	opacity: 0!important;
+	position: relative;
+	z-index: 99;
+	
+/* filter: drop-shadow(0 0 0.75rem #000000b5); */
+}
+
+.weapIcon[src*="https://assets.krunker.io/textures/weapons/icon_1.png"] {
+	content: url(https://i.imgur.com/9IkEg9g.png);
+	width: 145px;
+	height: auto;
+	
+}
+
+.weapIcon[src*="https://assets.krunker.io/textures/weapons/icon_2.png"] {
+	content: url(https://i.imgur.com/0JxTLGk.png);
+	width: 150px;
+	height: auto;
+	
+}
+
+.weapIcon[src*="https://assets.krunker.io/textures/weapons/icon_3.png"] {
+	content: url(https://i.imgur.com/AfmLqXa.png);
+	width: 120px;
+	height: auto;
+	
+}
+
+
+.weapIcon[src*="https://assets.krunker.io/textures/weapons/icon_6.png"] {
+	content: url(https://i.imgur.com/bqpH9HY.png);
+	width: 150px;
+	height: auto;
+}
+
+.weapIcon[src*="https://assets.krunker.io/textures/melee/icon_"] {
+	content: url(https://i.imgur.com/03ycs5H.png);
+	width: 140px;
+	height: auto;
+}
+
+.weapItem[style*="opacity: 1"] .weapIcon, .weapItem[style*="opacity:1"] .weapIcon {
+  opacity: 1 !important;
+  padding: 0 !important;
+}
+
+.weapKey, .weapSkin {
+	display: none
+}
+
+
+#ammoHolder * {
+	font-family: Tahoma;
+	font-weight: 600;
+	letter-spacing: -4px;
+}
+
+
+#ammoHolder {
+	position: absolute;
+	right: 0;
+	height: fit-content;
+	vertical-align: middle;
+	padding: 0;
+	border-radius: 0;
+	margin: 0;
+	right: 30px;
+	margin-top: 6px;
+	text-align: right;
+	background-size: 0!important
+
+}
+
+.greyInner {
+	margin: 0;
+	padding: 0
+}
+
+.UIB {
+	background-size: 0% !important;
+}
+
+
+#ammoVal, #ammoMax {
+	position: relative;
+	font-size: 36px;
+	vertical-align: middle
+}
+
+
+#ammoIcon {
+    height: 45px;
+    float: left;
+    image-rendering: pixelated;
+	
+    filter: brightness(100);
+	transform: scaleX(0.89) scaleY(0.9);
+	margin-right: 10px;
+	margin-top: 3px
+}
+
+
+
+/* new leader board adjustments */
+
+
+#centerLeaderDisplay { /* Whole Scoreboard */
+    position: absolute;
+    z-index: 2;
+    overflow-y: auto;
+    width: 1000px;
+    text-align: left;
+    background-color: rgba(0,0,0,.65);
+    border-radius: 1px;
+    border: 5px solid #0000003d; 
+   
+    animation: blendin 0.1s linear 1;
+
+    
+	overflow-x: hidden;
+	padding-top: 50px;
+
+	box-shadow: inset 0 0 70px #00000038;
+}
+
+.centerLeaderContainerInner { /* Both Team Containers */
+    color: #fff;
+    background-color: transparent;
+    padding: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    min-height: 195px!important;
+    position: relative;
+    margin-top: 55px;
+    background-color: transparent!important
+}
+
+#leaderContainerD { /* FFA Team Container */
+	padding-bottom: 25px;
+	padding-top: 60px;
+	min-height: 50px!important
+}
+
+#leaderContainer0 { /* Teams Container 1 (up) */
+    margin-top: 60px;
+	margin-bottom: 10px;
+	
+}
+
+#leaderContainer1 { /* Teams Container 2 (down) */
+	margin-bottom: 130px;
+}
+
+.newLeaderItem { /* Player Name, Score, Number CONTAINER */
+    font-size: 21px;
+    padding: 0px 15px;
+    margin-top: 0px;
+}
+
+.newLeaderItem span { /* Player Clan */
+
+    font-size: 14px;
+    position: relative;
+}
+
+.newLeaderCounter { /* Player Numbers- 1., 2., 3. etc */
+    margin-right: 0px;
+    width: 20px;
+    margin-left: 2px;
+    text-align: center;
+    padding-left: 5px;
+	padding-right: 10px;
+    padding-top: 2px;
+   /*background-color: #ffffff1a;*/
+	font-size: 15px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+}
+
+.newLeaderScore { /* Player Score- Captured Flags for player */ 
+
+	/* not there anymore? */
+	
+    position: absolute;
+    margin-left: 0px;
+    text-align: right;
+
+    right: 30px;
+    width: 60px;
+	font-family: Tahoma;
+	font-weight: 600;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+}
+
+.newLeaderTeam { /* Team Names (Team 1, Team 2..) */
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+	font-size: 17px;
+    margin-bottom: 30px;
+    margin-right: 8px;
+    text-align: left;
+    position: relative;
+    top: 10px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+	
+	background-color: rgb(0 0 0 / 30%);
+	border-radius: 0!important;
+	
+	
+	border-bottom: 3px solid rgb(255 255 255 / 20%);
+	border-top: 3px solid rgb(255 255 255 / 20%);;
+}
+
+
+
+.newLeaderTeamScore { /* Team Score Counter */
+
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+	color: white;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 400;
+    width: 100%;
+    position: absolute;
+    right: 55px;
+    bottom: 8px;
+    text-align: right;
+
+}
+
+.newLeaderNoPlayers { /* "No Players" */
+	font-size: 18px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+    margin-bottom: 5px;
+    color: rgba(255,255,255,.4);
+	font-size: 20px;
+	margin-left: 35px;
+}
+
+
+#centerLeaderDisplay::before {
+	color: #ffffffa3;
+	content: "          ZombieEvac  |  Game by DukeV";
+	white-space: pre;
+	color: #e6e6e6;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+	font-size: 23px;
+	font-weight: 600;
+	position: absolute;
+	top: 10px;
+	left: 13px;
+	border-bottom: 3px solid #ffffffa3;
+	padding-bottom: 8px;
+	border-radius: 0;
+	width: 971px;
+
+	padding-bottom: 27px;
+	padding-top: 13px
+}
+
+#centerLeaderDisplay::after {
+    background-image: url(https://i.imgur.com/eAfk72X.png);
+    background-size: 70px 70px!important;
+	background-repeat: no-repeat;
+	height: 70px; width: 70px;
+    content: "";
+    image-rendering: -webkit-optimize-contrast;
+	position: absolute;
+	top: 10px;
+	left: 13px;
+
+}
+
+
+.newLeaderNameF {
+	font-size: 15px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+
+}
+
+.newLeaderNameM {  /* You on Scoreboard */
+    position: relative;
+	font-size: 15px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+    color: white!important;
+    background-color: #ffffff1a;
+    padding-right: 815px;
+	padding-left: 10px;
+	
+}
+
+.newLeaderName {
+	font-size: 15px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5),1px -1px 0 rgba(0,0,0,.5),-1px 1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5)!important;
+    color: #e04545!important;
+}
+
+#newLeaderDisplay .material-icons {
+	position: relative;
+	font-size: 20px!important;
+	background-color: #ffde905e;
+	margin-top: 0!important;
+	padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+.newLeaderName,.newLeaderNameM,.newLeaderNameF {
+	padding-bottom: 3px;
+}
+
+#ingameTable td {
+	vertical-align: top
+}
+
+
+#ingameTable th {
+   border-bottom: 2px solid #ffffffa3;
+}
+
+#leaderDisplay {
+    background-color: rgba(0,0,0,.45);
+    border-radius: 1px;
+    border-right: 5px solid #aaaaaa;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 32%, rgba(0,0,0,0.5) 100%);
+    padding-left: 60px
+}
+
+/* Scoreboard end */
+
+/* killfeed */
+
+#killFeed {
+	margin-top: 15px;
+	display: block!important
+}
+
+.kfItem {
+	border-radius: 1px;
+    background: linear-gradient(90deg, rgba(2,0,36,0.048) 0%, rgba(0,0,0,0.15) 10%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.45) 75%, rgba(0,0,0,0.5) 100%);
+    padding-right: 25px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    position: relative;
+    left: 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);
+    border-right: 4px solid #aaaaaa !important
+}
+
+
+/* map divs */
+
+
+#stamBarParent {
+	position: absolute; 
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: 100px;
+	width: 500px;
+	height: 28px; 
+	filter: drop-shadow(0 0 1.5rem #000000b3);
+
+	
+}
+
+
+#stamBarBackground {
+	height: 100%;
+	z-index: 1; 
+	background-color: #761313; 
+	border: 4px solid black;
+box-shadow: inset 0 0 5px #0000009c;
+}
+
+#stamBarBackground::before {
+	content: "Stamina Bar";
+	position: absolute;
+	color: white;
+	text-align: center;
+	z-index: 999;
+	top: 3px;
+	text-shadow: 2px 2px #000000, -2px -2px black, -2px 2px black, 2px -2px black;
+	letter-spacing: 2px;
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+
+
+#stamBar {
+	z-index: 2; 
+	transition: width 0.25s ease; 
+	height: 100%;
+	background-color: #ce3636!important;
+	
+}
+
+
+#timerContainer {
+	background-color: transparent!important;
+	display: flex !important;
+	flex-direction: row;
+	
+}
+
+#timerContainer div {
+	background-color: #0000009e;
+
+	border: 5px solid black; 
+	box-shadow: inset 0 0 30px #00000099;
+	padding: 5px 10px;
+
+
+
+	font-size: 60px!important;
+}
+
+#timerDiv {
+	margin-right: 15px;
+
+	
+}
+
+#timerInfo {
+	color: #f1604e !important
+}
+
+#timerInfo::before {
+	content: "until ";
+	color: white;
+}
+
+#gameInfoContainer * {
+	font-family: Arial;
+	font-weight: 600;
+}
+
+#gameInfoContainer {
+	display: flex!important;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top: 20px!important
+}
+
+#gameStateInfo {
+	background-color: #0000009e !important;
+
+	border-left: 5px solid #e97465; 
+	border-right: 5px solid #e97465;
+	padding: 7px 25px!important;
+
+	color: #fbd14f !important
+}
+
+#gameStateInfo::before, #gameStateInfo::after {
+	content: "warning_amber ";
+	font-family: material icons;
+	color: #e97465;
+	margin-right: 15px;
+	font-weight: 400;
+	margin-top: 3px
+}
+
+#gameStateInfo::after {
+	margin-left: 15px;
+	margin-right: 0
+}
+
+#winTeamInfo {
+	background-color: #0000009e !important;
+
+	border: 5px solid #0000008a; 
+	box-shadow: inset 0 0 20px #00000075;
+
+}
+
+
+#youAreDiv {
+	
+	color: white;
+	text-shadow: -3px -3px 0 rgba(0,0,0,.8),3px -3px 0 rgba(0,0,0,.8),-3px 3px 0 rgba(0,0,0,.8),3px 3px 0 rgba(0,0,0,.8);
+
+	width: 300px;
+
+}
+
+#youAreDiv::before {
+	content: "You are ";
+	color: white;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#youInfectDiv {
+	text-shadow: -2px -2px 0 rgba(0,0,0,.8),2px -2px 0 rgba(0,0,0,.8),-2px 2px 0 rgba(0,0,0,.8),2px 2px 0 rgba(0,0,0,.8);
+}
+
+#youInfectDiv::after {
+	content: " You feel dizzy and start to lose health.";
+	color: white;
+	display: flex;
+	font-size: 30px
+}
+
+
+/* menu map divs */
+
+
+@keyframes important {
+	
+	0% {
+	    transform: scale(1);
+	}
+
+	50% {
+	    transform: scale(1.04);
+		background-color: #202020;
+	
+	}
+
+	100% {
+		transform: scale(1);
+	}
+	
+}
+
+
+#pXPCount {
+	display: flex;
+    height: 70px;
+    width: max-content;
+	align-items: start;
+	clip-path: polygon(7% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 93% 100%, 53% 100%, 49% 94%, 45% 100%, 0% 100%);
+	
+	background-color: #191919;
+	color: white;
+	padding-left: 30px;
+	padding-right: 35px;
+	padding-bottom: 5px;
+	align-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	font-size: 26px;
+	position: absolute;
+	left: 410px;
+	top: 10px;
+
+	cursor: pointer;
+	transition: 0.1s
+}
+
+#pXPCount:hover {
+	background-color: #282828;
+}
+
+#pXPCount::before {
+	content: "your XP:   ";
+	color: #7f7f7f;
+	white-space: pre-wrap
+}
+
+
+#menItemSep {
+	width: 88%;
+	position: relative;
+	left: 20px;
+	height: 5px;
+	background-color: #7f7f7f;
+	margin: 25px 0;
+	pointer-events: all;
+	
+}
+
+#menItemHow, #menItemChange, #menItemCreds {
+    color: #7f7f7f;
+    font-size: 25px!important;
+	display: flex!important;
+	justify-content: start;
+	align-items: center;
+	margin-top: 13px;
+	padding-left: 20px;
+	box-sizing: border-box;
+
+    background-color: #171717;
+	
+	clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 95% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+    height: 70px;
+    width: 400px;
+	text-transform: lowercase;
+	transition: 0.1s;
+	margin-top: 22px;
+}
+
+
+#menItemHow::before, #menItemChange::before, #menItemCreds::before {
+	content: "help";
+	flex-direction: row;
+	font-family: material icons;
+	font-size: 43px;
+	margin-right: 30px;
+}
+
+#menItemHow:hover, #menItemChange:hover, #menItemCreds:hover {
+	box-shadow: inset 0 0 30px #0606068c;
+    filter: drop-shadow(0 0 0.5rem #250303);
+    background: linear-gradient(90deg, #bf3d3d 0%, #a12727 52%, #a12727 58%, #911010);
+	cursor: pointer;
+	color: white!important;
+}
+
+#menItemHow:active, #menItemChange:active, #menItemCreds:active {
+	box-shadow: inset 0 0 30px #0606068c;
+    filter: drop-shadow(0 0 0.5rem #250303);
+    background: linear-gradient(90deg, #8f2d2d 0%, #831f1f 52%, #831f1f 58%, #730a0a);
+}
+
+
+#menItemHow {
+	animation: important 2.9s ease-in-out infinite!important;
+	margin-top: 10px;
+}
+
+#menItemChange::before {
+	content: "update";
+}
+
+#menItemCreds::before {
+	content: "description";
+}
+
+
+
+#pClassHolder {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+
+#pClassSelParent {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	height: fit-content;
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+#pClassSelH:hover, #pClassSelZ:hover {
+	opacity: 1!important;
+	color: white;
+	padding-right: 10px;
+	padding-left: 100px;
+	border-right: 7px solid #ffffff;
+}
+
+#pClassSelH, #pClassSelZ {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+	margin-bottom: 15px;
+	padding-left: 40px;
+	padding-bottom: 4px;
+	border-right: 5px solid #b91b1a;
+	background: linear-gradient(-90deg, rgb(131 0 0 / 50%) 0%, rgb(59 2 2 / 45%) 65%, rgb(0 0 0 / 0%) 100%);
+	text-shadow: 3px 3px #000000, -3px -3px black, -3px 3px black, 3px -3px black;
+	transition: 0.2s;
+	animation: none!important;
+	opacity: 0.4;
+}
+
+#pClassSelZ {
+	color: #ff3838;
+	opacity: 1;
+}
+
+
+#pClassSelH {
+	color: #dcdcdc;
+}
+
+
+
+
+#menPlayerClass {
+    color: white;
+    font-size: 0!important;
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+	text-shadow: 3px 3px #000000, -3px -3px black, -3px 3px black, 3px -3px black;
+    height: 750px;
+    width: 500px;
+	transition: 0.3s;
+	transition-timing-function: ease-in-out;
+
+
+
+	/*animation: important 2.9s ease-in-out infinite;*/
+	z-index: 9;
+	background: linear-gradient(0deg, rgb(131 13 13 / 70%) 0%, rgb(69 4 4 / 45%) 35%, rgb(0 0 0 / 0%) 100%);
+    border-left: 2px solid transparent;
+    border-image-source: linear-gradient(to top, #ff0000 0%, #e9373759 50%, transparent 90%); 
+    border-image-slice: 5;
+/* 	background-position: 102% 0%;
+	background-position: 50% 0%;
+	background-position: 0% 0%; */
+}
+
+#menPlayerClass::after {
+	content: "";
+    height: 750px;
+    width: 400px;
+	margin-right: 15px;
+	background-image: url(https://i.imgur.com/HEOTyoi.png);
+	image-rendering: -webkit-optimize-contrast;
+	background-repeat: no-repeat;
+	background-position: inherit;
+	transform: scale(1.2);
+	animation: zAppear 0.8s ease-out;
+}
+
+
+@keyframes zAppear {
+    from {
+        margin-top: 500px;
+    } to {
+		margin-top: 0;
+	}
+}
+
+#menClassInfo {
+	display: block;
+	position: fixed;
+	width: 300px;
+	height: 200px;
+	right: 650px;
+	bottom: 700px;
+	background-image: url(https://i.imgur.com/mNyEngU.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: drop-shadow(0px 0px 15px #000000);
+	pointer-events: none!important;
+}
+
+#menClassTag {
+	display: block;
+	filter: drop-shadow(0px 0px 25px #000000);
+	text-shadow: 5px 5px #000000, -5px -5px black, -5px 5px black, 5px -5px black;
+	top: 0px;
+	font-size: 40px;
+	text-align: center;
+	position: absolute;
+	color: white;
+	z-index: 999;
+}
+
+#menClassTag::before {
+	font-size: 22px;
+	content: "current zombie class \A";
+	white-space: pre-line;
+	color: #f73a3a
+}
+
+
+#menItemZClass {
+    color: white;
+	display: flex!important;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	padding-bottom: 5px;
+    background-color: #0e0e0e;
+	text-shadow: 3px 3px #000000, -3px -3px black, -3px 3px black, 3px -3px black;
+    height: 68px;
+    width: 413px;
+	transition: 0.1s;
+	font-size: 28px;
+	text-transform: lowercase;
+
+	position: absolute;
+	bottom: 20px;
+/* 	border: 6px solid #191919; */
+	cursor: pointer;
+	box-shadow: inset 0 0 30px #0606068c;
+
+	clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 99% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+
+	z-index: 99;
+}
+
+#menItemZClass:hover::after {
+	background-color: #3c3c3c;
+	box-shadow: inset 0 0 30px #060606;
+}
+
+
+#menItemZClass::before {
+	content: "sync";
+	flex-direction: row;
+	font-family: material icons;
+	font-size: 43px;
+	margin-right: 10px;
+	filter: drop-shadow(0px 0px 20px #000000);
+	margin-top: 5px;
+} 
+
+#menItemZClass::after {
+	content: "";
+	display: block;
+	position: fixed;
+	bottom: 26px;
+    height: 60px;
+    width: 400px;
+	background-color: #292929;
+	clip-path: inherit;
+	z-index: -1;
+	transition: 0.1s;
+	box-shadow: inset 0 0 30px #060606a1;
+} 
+
+
+
+
+
+
+#windowDivParent, #unlockDivParent {
+  width: 101%;
+  height: 101%;
+  background-color: rgb(0 0 0 / 60%);
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 0px 0px #00000085);
+  z-index: 9999999;
+  pointer-events: all;
+	animation: blendin 0.2s ease-in-out 1;
+}
+
+
+#windowDiv, #unlockWindow {
+  display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  pointer-events: all; 
+  width: 1100px; 
+  height: fit-content;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #111111; 
+  color: white;
+  padding: 30px 35px 30px 35px; 
+  font-size: 30px;
+	border: 5px solid #1f1f1f;
+}
+
+#dismissDiv, #confUnlock {
+  display: flex;
+  justify-content: center;
+  line-height: 63px;
+  pointer-events: all; 
+  width: 100%; 
+  height: 70px;
+  background-color: #474747e1; 
+  cursor: pointer;
+  color: #d9d9d9;
+  margin-top: 35px;
+  clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 100% 100%, 34% 100%, 33% 90%, 30% 100%, 0% 100%);
+	transition: 0.2s;
+    box-shadow: inset 0 0 20px #0606068c;
+}
+
+
+
+#dismissDiv:hover, #confUnlock:hover {
+  color: white;
+  text-shadow: 3px 3px #000000, -3px -3px black, -3px 3px black, 3px -3px black;
+	
+	box-shadow: inset 0 0 30px #0606068c;
+    filter: drop-shadow(0 0 0.5rem #250303);
+    background: linear-gradient(90deg, #bf3d3d 0%, #a12727 52%, #a12727 58%, #911010);
+}
+
+#dismissDiv:active, #confUnlock:active {
+	box-shadow: inset 0 0 30px #0606068c;
+    filter: drop-shadow(0 0 0.5rem #250303);
+    background: linear-gradient(90deg, #8f2d2d 0%, #831f1f 52%, #831f1f 58%, #730a0a);
+}
+
+
+
+
+#changelogContent, #credsContent {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  display: flex;
+  background-color: rgb(32, 32, 32);
+  padding: 20px 15px;
+	padding-top: 10px;
+	box-sizing: border-box;
+  line-height: 60px;
+  flex-direction: column;
+	color: white;
+}
+
+#changelogContent::after {
+	content: "- Added Zombie Classes \A - Human Classes soon";
+	white-space: pre;
+	color: #afafaf
+}
+
+
+#credsContent {
+	text-align: center;
+}
+
+#credsContent::after {
+	content: "Minimap Script - Andrii, DukeV \A Fall Damage Script - bub_lap \A Viewmodel Script (Melee) - DQ_Swat, DukeV \A timeToString snippet - blandrice\A Everything else - DukeV";
+	white-space: pre;
+	color: #afafaf;
+
+	margin-top: 10px;
+	
+	text-align: center;
+	
+}
+
+
+#winContent {
+	color: white;
+	
+}
+
+#howToContent::after {
+/* 	content: "As human, survive until the Evacuation Point appears- Once the Evac Point appears, get there as quickly as possible to win the round and earn rewards!" */
+}
+
+
+
+#howToScreen {
+  width: 100.1%;
+  height: 100.1%;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 0px 0px #00000085);
+  z-index: 9999999;
+
+  background-color: rgb(0 0 0 / 60%);
+	background-image: url(https://i.imgur.com/RPzXLp0.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+	image-rendering: -webkit-optimize-contrast;
+	animation: blendin 0.4s ease-in-out 1;
+
+}
+
+
+
+/* class change */
+
+#asd {
+	
+}
+
+#zClassContent {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  display: flex;
+  background-color:rgb(32, 32, 32);
+  padding: 35px 50px;
+	padding-top: 120px;
+  box-sizing: border-box;
+  line-height: 60px;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+#zClassContent::before {
+	content: "Set Zombie Class for next Spawn";
+	display: block;
+	position: absolute;
+	left: 50%;
+	width: max-content;
+	transform: translateX(-50%);
+	top: 25px;
+	padding: 0 30px;
+    border-radius: 3px;
+}
+
+#selClass1, #selClass2, #selClass3 {
+  font-size: 0;
+  display: flex;
+  width: 300px;
+  text-align: center;
+  height: 630px;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+  border: 8px solid #101010!important;
+  padding-top: 15px;
+  transition: 0.1s;
+  text-shadow: 3px 3px #000000, -3px -3px black, -3px 3px black, 3px -3px black;
+box-shadow: inset 0 0 130px #000000;
+
+	
+  padding-left: 10px;
+  padding-right: 10px;
+	box-sizing: border-box;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#selClass1:hover, #selClass2:hover, #selClass3:hover {
+  color: white;
+  background-color: transparent;
+  border: 8px solid #e0e0e0!important;
+  cursor: pointer;
+}
+
+#selClass1 {
+
+  background-image: url(https://i.imgur.com/XnubjWF.png);
+}
+
+#selClass1::after {
+	content: "Walker";
+}
+
+#selClass2::after {
+	content: "Metalhead";
+}
+
+#selClass3::after {
+	content: "Dasher";
+}
+
+#selClass1::after, #selClass2::after , #selClass3::after  {
+	font-size: 35px;
+	filter: drop-shadow(0 0 0.5rem #000000);
+	height: fit-content;
+	padding: 3px 20px;
+	padding-top: 0;
+	width: 100%;
+}
+
+
+#selClass1:hover::before, #selClass2:hover::before, #selClass3:hover::before { /* only change loadout text */
+	white-space: break-spaces;
+	font-size: 35px!important;
+	color: white !important;
+	transition: 0.3s;
+	display: block;
+	position: absolute;
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 9;
+	background-color: rgb(0,0,0, 0.7);
+	bottom: 42px;
+	width: 288px;
+	height: 615px;
+
+/* 	bottom: 35px;
+	width: 300px;
+	height: 630px; */
+}
+
+#selClass1:hover::before {
+	content: "Health: 100\A \A Abilities: Wall-Jump\A \A ";
+}
+
+
+
+
+
+
+#selClass2 {
+  background-image: url(https://i.imgur.com/Le78Nam.png);
+}
+
+#selClass2:hover::before {
+	content: "Health: 150\A \A Abilities: Climb Walls\A \A Slower speed";
+}
+
+#selClass3 {
+  background-image: url(https://i.imgur.com/XPYhOdh.png);
+}
+
+#selClass3:hover::before {
+	content: "Health: 100\A \A Abilities: Dash\A \A Press SHIFT+G to dash!";
+}
+
+
+
+#unlockWindow {
+	z-index: 99;
+	width: fit-content;
+	white-space: pre;
+	text-align: center;
+}
+
+
+#unlockWindow::before {
+	content: "This Zombie class is locked!";
+	color: #ec4141
+}
+
+#confUnlock {
+	
+}
+
+
+/* ------------------ ingame ---------------------- */
+
+
+
+
+
+
+
+
+
+#gameNameHolder {
+    position: absolute;
+    top: -30px;
+    left: 15px;
+    transform: none;
+}
+
+#mainLogo {
+/*     content: url(https://i.imgur.com/BkeRiCo.png); */
+	content: url(https://i.imgur.com/bZMkxen.png);
+    height: 330px;
+    image-rendering: -webkit-optimize-contrast;
+    pointer-events: all;
+	-webkit-user-drag: none;
+
+}
+
+
+#menuItemContainer {
+    position: absolute;
+    top: 370px!important;
+    left: 60px;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    box-shadow: none!important;
+	filter: drop-shadow(5px 5px 0px #00000045);
+}
+
+#menuBtnProfile { font-size: 0!important }
+
+#menuBtnProfile::before { 
+    content: "profile";
+    font-size: 25px!important;
+}
+
+#menuBtnShop { font-size: 0!important }
+
+#menuBtnShop::before { 
+    content: "shop";
+    font-size: 20px!important;
+}
+
+
+.menuItem {
+    background-color: #171717!important;
+    flex-grow: 0;
+    height: 70px;
+    width: 400px;
+    margin: 10px 5px;
+    border-radius: 0px;
+    transition: 0.1s;
+    align-items: start;
+    filter: drop-shadow(0 0 0.5rem #0000002e);
+
+	clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 95% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+	
+/* 	border: 3px solid #2a2a2a !important; */
+	
+}
+
+
+.menuItem .menuItemTitle {
+    position: absolute;
+
+    color: #7f7f7f !important;
+    transition: 0.1s;
+    text-transform: lowercase;
+    
+    margin-top: 0!important;
+    font-size: 25px!important;
+
+    margin-left: 87px;
+	margin-bottom: 5px;
+
+}
+
+.menuItem:hover .menuItemTitle, .menuItem:active .menuItemTitle {
+    color: white !important;
+	text-shadow: 2px 3px 0px rgb(80 80 80)
+}
+
+
+
+
+.menBtnIcn {
+	font-size: 50px!important;
+	margin-left: 15px;
+}
+
+.menBtnIcn svg {
+	width: 45px;
+	margin-top: 8px;
+}
+
+.menuItem .menBtnIcn {
+    background-position: left;
+    left: 20px;
+    filter: brightness(0) invert(0.5);
+    transition: 0.1s;
+}
+
+.menuItem:hover .menBtnIcn {
+    filter: brightness(0) invert(1);
+	transform: none!important;
+}
+
+.menuItem:hover {
+	box-shadow: inset 0 0 30px #0606068c;
+    filter: drop-shadow(0 0 0.5rem #250303);
+    background: linear-gradient(90deg, #bf3d3d 0%, #a12727 52%, #a12727 58%, #911010);
+}
+
+.menuItem:active {
+	box-shadow: inset 0 0 30px #0606068c;
+    filter: drop-shadow(0 0 0.5rem #250303);
+    background: linear-gradient(90deg, #8f2d2d 0%, #831f1f 52%, #831f1f 58%, #730a0a);
+}
+
+
+[onclick="SOUND.play(`select_0`,0.15);showWindow(5)"] .menuItemTitle {
+    left: 70px;
+    margin: 0
+}
+
+
+#uiBase.onMenu #chatHolder {
+    left: 30px;
+    bottom: 20px
+}
+
+#voiceDisplay, #voiceIcon, #recTimer {
+    display: none
+}
+
+.greyInlineInner:first-child, .greyInlineInner:last-child{
+    display: none
+}
+
+/* #menuItemContainer, #mainLogo, #spectateHUD, #menuClassContainer, #hiddenClasses, #subLogoButtons, .headerBarRight, #spectButton, #menItemZClass,*/
+#menuHider *, .spectateInfo {
+	animation: blendin 0.9s ease-in-out 1;
+}
+
+#instructionHolder {
+    background-color: rgb(0 0 0 / 75%);
+    animation: blendin 0.3s ease-in-out 1;
+	
+    width: 101%;
+    box-shadow: inset 0 0 230px #380606cf;
+    height: 101%;
+	/*backdrop-filter: blur(4px); causes fps drops */
+}
+
+#instructions {
+	font-size: 26px;
+    text-transform: lowercase;
+	position: absolute;
+	margin-left: -0.2%;
+}
+
+#spectButton {
+    font-family: "Arial";
+	font-weight: 600;
+    text-transform: lowercase;
+	margin-top: 10px;
+/* 	opacity: 0.5; */
+	position: absolute;
+	transform: none!important;
+	left: auto!important;
+	right: 400px;
+	top: 35px!important
+}
+
+#instructions {
+	opacity: 0!important
+}
+
+#spectButton span {
+	font-size: 18px!important;
+}
+
+#spectButton .sliderSml::before { /*checkmark on */
+    display: inline-block;
+    top: 0px;
+    color: white;
+    font-family: material icons;
+    font-size: 20px;
+    left: 0px;
+    background-color: transparent;
+    content: "check";
+}
+
+#spectButton input:checked+.sliderSml::before { /*checkmark off */    
+    -ms-transform: none;
+    position: absolute;
+    top: 3px;
+    font-size: 15px;
+    content: "check";
+    left: 3px;
+    color: black;
+    font-family: material icons;
+    -webkit-transform: none;
+    transform: none
+}
+
+
+#spectButton .sliderSml { /*unchecked bg */
+    height: 20px;
+    border-radius: 7px;
+    bottom: 12px;
+    position: absolute;
+    top: -2px;
+    background-color: #6d6d6d;
+    width: 20px;
+}
+
+#spectButton input:checked+.sliderSml { /*checked bg color*/
+    background-color: #e84a40;
+}
+
+#spectButton .switchsml {
+    position: relative;
+    width: auto;
+    margin-left: 9px
+}
+
+
+@keyframes grow {
+    from {
+        opacity: .3;
+    } to {
+		opacity: 0.5;
+	}
+}
+
+@keyframes blendin {
+	from {
+		opacity: 0%
+	} to {
+		opacity: 100%
+	}
+}
+
+
+#subLogoButtons {
+    bottom: -95px;
+	padding: 20px;
+	padding-top: 50px;
+	pointer-events: all;
+	transition: 0.2s;
+	transition-timing-function: ease-in-out;
+	filter: drop-shadow(5px 5px 0px #00000045);
+}
+
+#subLogoButtons::before {
+	content: "^";
+	font-size: 50px;
+	color: #ce3636;
+	text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000, 0px 0px 0px rgba(0,0,0,0);
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	display: block;
+}
+
+#subLogoButtons:hover {
+	bottom: 0px;
+}
+
+#subLogoButtons > .button {
+    border-radius: 0;
+    background-color: #171717!important;
+    color: #7a7a7a;
+	border: 0px solid #2a2a2a !important;
+}
+
+#subLogoButtons > .button:hover {
+    background: linear-gradient(90deg, #b73333 0%, #a12727 52%, #a12727 58%, #992121);
+	box-shadow: inset 0 0 20px #0606068c!important;
+    color: white;
+	border: 0px solid #111111 !important;
+    transform: none;
+	text-shadow: 2px 3px 0px rgb(80 80 80)
+}
+
+#subLogoButtons > .button:active {
+    background: linear-gradient(90deg, #8f2d2d 0%, #831f1f 52%, #831f1f 58%, #730a0a);
+}
+
+
+#subLogoButtons .buttonB, #subLogoButtons .buttonPI, #subLogoButtons .buttonR, #subLogoButtons .buttonP, #subLogoButtons .buttonO, #subLogoButtons .buttonG {
+    border: 0!important;
+    border-radius: 0;
+    background-color: #171717;
+    clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 95% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+    text-transform: lowercase;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+
+
+#customizeButton {
+    background-color: #171717!important;
+    color: #7a7a7a;
+	border: 3px solid #2a2a2a !important;
+    padding-bottom: 30px;
+    display: none
+}
+
+#customizeButton:hover {
+    background-color: #a33131!important;
+    transform: none
+}
+
+#menuClassIcn {
+    display: none
+}
+
+/* #menuClassNameTag {
+    display: block;
+    background-color: #171717;
+	transform: translateX(-50%);
+	left: 47%;
+	width: max-content;
+    border-radius: 60px;
+    padding: 1px 10px 10px 10px;
+    margin-top: 0!important;
+    bottom: 440px;
+    filter: drop-shadow(0 0 1.5rem #00000073);
+	pointer-events: all;
+	margin-left: 20px;
+} */
+
+.menuClassLevelBox {
+    background-color: transparent
+}
+
+#menuClassSubtext, #menuClassIcn {
+    display: none
+}
+
+#menuClassName {
+	position: relative;
+	text-align: center;
+	width: 480px;
+	display: block;
+	padding-bottom: 5px;
+	filter: drop-shadow(0 0 1.5rem #00000073);
+	pointer-events: all
+}
+
+
+
+/* #menuClassContainer:hover #classPreviewCanvas {
+    animation: darken 0.2s linear!important;
+	filter: brightness(0) invert(0.133) drop-shadow(0 0 0.2rem #000000a8);
+} */
+
+#classPreviewCanvas {
+	filter: drop-shadow(0 0 0.5rem #000000a8);
+    position: relative;
+    bottom: 30px;
+    right: 120px;
+}
+
+#menuClassContainer {
+	display: none;
+    bottom: 110px;   
+    right: 40px;
+	background-image: linear-gradient(0deg, rgb(247 32 37 / 23%) 0%, rgb(247 32 37 / 4%) 35%, rgb(0 0 0 / 0%) 100%);
+    width: 479px;
+	transform: none;
+}
+
+
+#hiddenClasses {
+    display: flex!important;
+    flex-direction: row;
+    position: absolute;
+    right: 30px;
+    bottom: 750px;
+    z-index: 999999;
+    pointer-events: all;
+    padding: 5px;
+    background-color: #171717;
+    width: auto;
+    flex-wrap: wrap;
+	border: 2px solid #a33131;
+	opacity: 0!important;
+	transition: 0.1s
+}
+
+#hiddenClasses:hover {
+	opacity: 1!important
+}
+
+#hiddenClasses > div {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0 0 0 / 50%);
+    image-rendering: pixelated;
+    margin: 5px;
+	transition: 0.05s
+}
+
+#hiddenClasses > div:hover {
+    cursor: pointer;
+    outline: 3px solid #bc2222;
+}
+
+#menuClassPicker0 {
+    content: url(https://assets.krunker.io/textures/classes/icon_0.png);
+}
+
+#menuClassPicker1 {
+    content: url(https://assets.krunker.io/textures/classes/icon_1.png);
+}
+
+#menuClassPicker2 {
+    content: url(https://assets.krunker.io/textures/classes/icon_2.png);
+}
+
+#menuClassPicker3 {
+    content: url(https://assets.krunker.io/textures/classes/icon_3.png);
+}
+
+#menuClassPicker4 {
+    content: url(https://assets.krunker.io/textures/classes/icon_4.png);
+}
+
+#menuClassPicker5 {
+    content: url(https://assets.krunker.io/textures/classes/icon_5.png);
+}
+
+#menuClassPicker6 {
+    content: url(https://assets.krunker.io/textures/classes/icon_6.png);
+}
+
+#menuClassPicker7 {
+    content: url(https://assets.krunker.io/textures/classes/icon_7.png);
+}
+
+#menuClassPicker8 {
+    content: url(https://assets.krunker.io/textures/classes/icon_8.png);
+}
+
+#menuClassPicker9 {
+    content: url(https://assets.krunker.io/textures/classes/icon_9.png);
+}
+
+#menuClassPicker10 {
+    content: url(https://assets.krunker.io/textures/classes/icon_10.png);
+}
+
+#menuClassPicker11 {
+    content: url(https://assets.krunker.io/textures/classes/icon_11.png);
+}
+
+#menuClassPicker12 {
+    content: url(https://assets.krunker.io/textures/classes/icon_12.png);
+}
+
+#menuClassPicker13 {
+    content: url(https://assets.krunker.io/textures/classes/icon_13.png);
+}
+
+#menuClassPicker14 {
+}
+
+#menuClassPicker15 {
+    content: url(https://assets.krunker.io/textures/classes/icon_15.png);
+}
+
+
+#menuClassPicker2, #menuClassPicker3, #menuClassPicker6, #menuClassPicker7, #menuClassPicker11, #menuClassPicker12, #menuClassPicker13, #menuClassPicker14, #menuClassPicker15 {
+	display: none!important
+}
+
+
+#mapInfoHld {
+    font-size: 0;
+	background-color: #171717;
+	border: 3px solid #2a2a2a;
+	padding: 0 10px;
+	padding-bottom: 5px;
+
+}
+
+#mapInfo {
+    font-size: 0
+}
+
+#mapInfo::before {
+    font-size: 22px;
+    content: "plz upvote";
+    white-space: pre;
+	color: #535353
+}
+
+#menuWindow {
+    top: 50%!important;
+    transform: translate(-50%,-50%)!important;
+    max-height: calc(100% - 180px)!important;
+	border-radius: 0;
+	background-color: #252525!important;
+	border: 5px solid #3f3f3f;
+}
+
+#menuWindow::-webkit-scrollbar-track {
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    background-color: rgba(0,0,0,.25)
+}
+
+#menuWindow::-webkit-scrollbar {
+    width: 8px;
+}
+
+#menuWindow::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+	background-color: #a6a6a6
+}
+
+.settingsHeader {
+	background-color: #252525!important
+}
+
+#windowHolder.popupWin {
+    background-color: rgba(0,0,0,.70);
+    width: 101%;
+    height: 101%;
+	animation: blendin 0.2s linear 1;
+}
+
+
+
+/* game time + mode */
+
+#uiBase.onMenu #spectateUI {
+    display: block !important;
+	
+}
+
+#uiBase.onMenu #spectateHUD {
+	z-index: 1;
+    left: auto;
+    line-height: normal;
+    transform: none;
+	top: auto;
+	filter: drop-shadow(5px 5px 0px #00000045);
+}
+
+#uiBase.onMenu  #spectateHUD ~ div {
+	display: none!important;
+}
+
+#uiBase.onMenu #specNames, #uiBase.onMenu #specKPDContr, #uiBase.onMenu #specNames, #uiBase.onMenu #specContr, #uiBase.onMenu #specTeam0, #uiBase.onMenu #spec0, #uiBase.onMenu #specTeam1, #uiBase.onMenu #spec1, #specGMessage {
+    display: none !important;
+}
+
+#uiBase.onMenu .spectateInfo {
+	display: flex;
+	flex-direction: row-reverse;
+    position: absolute;
+	margin: auto;
+    right: 20px;
+	top: 30px;
+	
+
+    background-color: #171717;
+	clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 99% 0%, 100% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+	padding: 10px;
+	padding-left: 15px;
+	pointer-events: all;
+    transition: 0.1s
+}
+
+#uiBase.onMenu .spectateInfo:hover {
+    background-color: #212121;
+}
+
+#uiBase.onMenu #specTimer {
+}
+
+#uiBase.onMenu #specGameInfo {
+    color: #e84a40;
+}
+
+#uiBase.onMenu #specGameInfo {
+    font-size: 0 !important;
+	position: relative;
+	left: 8px;
+	text-transform: lowercase
+}
+
+
+
+#uiBase.onMenu #specGameInfo::before {
+	content: "time left";
+    font-size: 23px !important;
+	color: #f4f4f4;
+}
+
+
+
+#uiBase.onMenu #specGameInfo::after {
+	content: " - ";
+    font-size: 23px !important;
+	color: #c8c8c8;
+	position: relative;
+	left: 8px;
+}
+
+
+#uiBase.onMenu #specTimer {
+    background-color: transparent;
+    padding: 0!important;
+    font-size: 23px;
+	position: relative;
+	left: 8px;
+	color: #e84a40
+}
+
+
+/* spec end */
+
+/* 
+#menuClassContainer, #hiddenClasses, #menItemZClass {
+    display: none!important
+} */
+
+/* new */
+
+#menuDiv {
+	background-color: transparent;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+.menuItem[onclick*="showWindow(5)"] {
+    display: flex!important;
+	visibility: hidden
+}
+
+
+#mLevelCont {
+    display: none
+} 
+
+
+
+#signedInHeaderBar {
+    left: 55px;
+    top: 380px;
+	z-index: 1;
+	border-radius: 0!important;
+
+	width: fit-content;
+	background-color: transparent;
+	margin: 0!important;
+	filter: drop-shadow(5px 5px 0px #00000045);
+
+}
+
+
+#signedInHeaderBar [style="display:inline-block"] {
+	display: flex!important;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	padding: 5px 45px!important;
+	padding-left: 20px!important;
+	background-color: #171717!important;
+	height: 60px;
+	min-width: 330px;
+	clip-path: polygon(0% 0%, 75% 0%, 77% 10%, 80% 0%, 100% 0%, 94% 100%, 53% 100%, 49% 94%, 45% 100%, 2% 100%);
+
+	display: flex!important;
+	flex-direction: row;
+}
+
+
+#signedInHeaderBar span {
+	font-size: 23px
+}
+
+#menuAccountUsername {
+	font-size: 23px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 30px;
+}
+
+
+#menuAccountUsername::before {
+	content: "person";
+	font-size: 40px;
+	margin-top: 3px;
+	margin-right: 15px;
+	font-family: material icons
+}
+
+#pXPCount {
+	left: 440px;
+}
+
+#menuKRCount {
+	font-size: 23px;
+	color: #a9a9a9!important;
+}
+
+.krInfo {
+    margin-top: 5px;
+}
+
+#mailContainer {
+	display: none
+}
+
+
+#signedInHeaderBar .verticalSeparator {
+	display: none
+}
+
+
+#signedOutHeaderBar {
+	top: auto;
+    bottom: 890px;
+    left: 70px;
+    background: transparent!important;
+    width: 280px!important;
+	padding: 0!important;
+	margin: 0!important;
+}
+
+
+#menuMiniProfilePic {
+	display: none
+}
+
+#menuLvlHold {
+	display: none
+}
+
+.krSocial, .junkInfo {
+	display: none!important
+}
